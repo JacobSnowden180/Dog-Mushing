@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forum · Austin Dog Mushing</title>
+  <meta name="description" content="A single forum list for Austin dog mushers. Anonymous notes and replies, kept in this browser.">
+  <meta name="theme-color" content="#f3f0ea">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">
+        <img src="favicon.svg" alt="" width="28" height="28">
+        Austin Dog Mushing
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="guide.html">Guide</a>
+        <a href="forum.html" aria-current="page">Forum</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content" tabindex="-1">
+    <div class="wrap">
+      <header class="page-head column">
+        <p class="kicker">Forum</p>
+        <h1>Notes and replies</h1>
+        <p class="lede">One list, with no accounts and no sign-in. Posts stay in this browser for now.</p>
+      </header>
+
+      <noscript>
+        <p class="closing">The forum needs JavaScript to show posts in this browser.</p>
+      </noscript>
+
+      <section class="compose-section column" aria-labelledby="share-heading">
+        <h2 id="share-heading">New note</h2>
+        <form id="compose-form" class="stack" method="post" action="forum.html" novalidate>
+          <div class="field">
+            <label for="compose-name">Name <span class="hint">optional</span></label>
+            <input id="compose-name" name="displayName" type="text" maxlength="40" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="compose-title">Title</label>
+            <input id="compose-title" name="title" type="text" maxlength="140" aria-describedby="compose-title-error">
+            <p id="compose-title-error" class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="compose-body">Note</label>
+            <textarea id="compose-body" name="body" maxlength="4000" rows="6" aria-describedby="compose-body-error"></textarea>
+            <p id="compose-body-error" class="field-error" hidden></p>
+          </div>
+          <div>
+            <button class="button" type="submit">Post</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="column" aria-labelledby="feed-heading">
+        <h2 id="feed-heading" class="feed-head">Recent posts</h2>
+        <p id="forum-status" class="status" role="status"></p>
+        <div id="feed"></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-name">Austin Dog Mushing</p>
+      <p>An informal, unincorporated community in Austin, Texas.</p>
+    </div>
+  </footer>
+  <script src="js/forum.js" defer></script>
+</body>
+</html>
